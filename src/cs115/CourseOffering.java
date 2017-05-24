@@ -1,5 +1,6 @@
 package cs115;
 
+import javax.management.DynamicMBean;
 import java.time.LocalTime;
 
 /**
@@ -15,17 +16,31 @@ public class CourseOffering {
     private LocalTime time;
     private int capacity;
 
-    private enum Days {
+    public enum Days {
         MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY
+
     }
 
-    public String toString() {
-        return "";
+    public Days getDays() {
+        return
     }
 
-    public enum getDays() {
-        return 
+
+    public CourseOffering(int courseNumber, String courseName, String instructor,
+                          char[] section, String room, LocalTime time, int capacity) {
+        this.courseNumber = courseNumber;
+        this.courseName = courseName;
+        this.instructor = instructor;
+        this.section = section;
+        this.room = room;
+        this.time = time;
+        this.capacity = capacity;
     }
+
+    public String toStringg() {
+        return Days.MONDAY.toString();
+    }
+
 
     public int getCourseNumber() {
         return courseNumber;
