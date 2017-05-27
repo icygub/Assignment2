@@ -16,9 +16,18 @@ public class CourseOffering {
     private LocalTime time;
     private int capacity;
 
+    private enum enumDays {
+        MONDAY("Monday"), TUESDAY("Tuesday"), WEDNESDAY("Wednesday"), THURSDAY("Thursday"), FRIDAY("Friday");
+        private String name;
 
-    public enum enumDays {
-        MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY
+        enumDays(String name) {
+            this.name = name;
+        }
+
+        @Override
+        public String toString() {
+            return name;
+        }
 
     }
 
@@ -34,12 +43,8 @@ public class CourseOffering {
 
     }
 
-    public String toStringg() {
-        return enumDays.MONDAY.toString();
-    }
-
     public enumDays getDays() {
-        //return something....
+        return enumDays.FRIDAY; //return something....
     }
 
 
