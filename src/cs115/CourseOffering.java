@@ -11,42 +11,23 @@ public class CourseOffering {
     private int courseNumber;
     private String courseName;
     private String instructor;
-    private char[] section = new char[2];
+    private char section;
     private String room;
     private LocalTime time;
+    private EnumDays days[];
     private int capacity;
 
-    private enum enumDays {
-        MONDAY("Monday"), TUESDAY("Tuesday"), WEDNESDAY("Wednesday"), THURSDAY("Thursday"), FRIDAY("Friday");
-        private String name;
-
-        enumDays(String name) {
-            this.name = name;
-        }
-
-        @Override
-        public String toString() {
-            return name;
-        }
-
-    }
-
     public CourseOffering(int courseNumber, String courseName, String instructor,
-                          char[] section, String room, LocalTime time, int capacity, enumDays e) {
+                          char section, String room, LocalTime time, int days, int capacity) {
         this.courseNumber = courseNumber;
         this.courseName = courseName;
         this.instructor = instructor;
         this.section = section;
         this.room = room;
         this.time = time;
+        this.days = new EnumDays[days];
         this.capacity = capacity;
-
     }
-
-    public enumDays getDays() {
-        return enumDays.FRIDAY; //return something....
-    }
-
 
     public int getCourseNumber() {
         return courseNumber;
@@ -72,11 +53,11 @@ public class CourseOffering {
         this.instructor = instructor;
     }
 
-    public char[] getSection() {
+    public char getSection() {
         return section;
     }
 
-    public void setSection(char[] section) {
+    public void setSection(char section) {
         this.section = section;
     }
 
@@ -105,4 +86,11 @@ public class CourseOffering {
     }
 
 
+    public EnumDays[] getDays() {
+        return days;
+    }
+
+    public void setDays(EnumDays[] days) {
+        this.days = days;
+    }
 }
