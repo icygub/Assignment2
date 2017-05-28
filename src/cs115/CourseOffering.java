@@ -1,7 +1,6 @@
 package cs115;
 
 import java.time.LocalTime;
-import java.util.ArrayList;
 
 /**
  * Created by icyhot on 22/05/2017.
