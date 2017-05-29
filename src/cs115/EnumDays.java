@@ -20,8 +20,4 @@ public enum EnumDays {
     public EnumDays[] getDays() {
         return EnumDays.values(); //return something....
     }
-
-    public void setDays() {
-
-    }
 }
