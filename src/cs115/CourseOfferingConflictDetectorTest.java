@@ -40,6 +40,8 @@ public class CourseOfferingConflictDetectorTest {
         boolean shouldBeTrue = detector.isTimeDayConflict(co1, co2);
         assertTrue("There should be a TimeDay conflict", shouldBeTrue);
 
+        CourseOffering co3 = new CourseOffering(54321, "History", "Anderson", 'B', "101", LocalTime.MIDNIGHT, 2, 100);
+
     }
 
 }

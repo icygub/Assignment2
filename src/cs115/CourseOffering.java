@@ -28,6 +28,12 @@ public class CourseOffering {
         this.capacity = capacity;
     }
 
+    @Override
+    public String toString() {
+        String course = String.format("%s, Room %s, %s", courseName, room, time.toString());
+        return course;
+    }
+
     public int getCourseNumber() {
         return courseNumber;
     }
@@ -84,11 +90,11 @@ public class CourseOffering {
         this.capacity = capacity;
     }
 
-
     public EnumDays[] getDays() {
         return days;
     }
 
     public void setDays(EnumDays[] days) {
+
     }
 }

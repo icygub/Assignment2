@@ -16,10 +16,14 @@ public class CourseOfferingConflictDetector {
 
     public boolean isTimeDayConflict(CourseOffering first, CourseOffering second) {
         if(first.getTime() == second.getTime() && Arrays.equals(first.getDays(), second.getDays())) {
+            boolean roomConflict = isRoomConflict(first, second);
+            if(roomConflict) {
+                System.out.println(first.toString());
+                System.out.println(second.toString());
+                System.out.println();
+            }
             return true;
         }
         return false;
     }
-
-
 }

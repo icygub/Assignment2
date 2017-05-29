@@ -16,8 +16,4 @@ public enum EnumDays {
     public String toString() {
         return name;
     }
-
-    public EnumDays[] getDays() {
-        return EnumDays.values(); //return something....
-    }
 }
