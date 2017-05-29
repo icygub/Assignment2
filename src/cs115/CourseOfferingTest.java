@@ -11,9 +11,6 @@ import static org.junit.Assert.*;
 public class CourseOfferingTest {
     @org.junit.Test
     public void getDays() throws Exception {
-        CourseOffering co = new CourseOffering(12345, "Algebra", "Spencer", 'A', "101", LocalTime.MIDNIGHT, 2, 100);
-        int[] a = new int[2];
-        co.setDays(a);
 
     }
 
