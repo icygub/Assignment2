@@ -89,7 +89,6 @@ public class CourseOffering {
         return days;
     }
 
-    public void setDays(EnumDays[] days) {
-        this.days = days;
+    public void setDays(int[] days) {
     }
 }
